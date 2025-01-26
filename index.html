@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tesset</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body{
+            background-color: #3A7CA5;
+            height: 98vh;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            opacity: 1;
+        }
+
+        #holder{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.272);
+            width: 750px;
+            height: 400px;
+            transform: translateY(50%);
+            box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.192)
+        }
+        #btn1 {
+            background-color: #4F81BD;
+            border: solid 2px #2e4a6c;
+            color: #fff; 
+            height: 40px;
+            width: 180px;
+            border-radius: 1px;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        #btn1:hover {
+            transform: scale(1.02);
+            background-color: #3B9ED9
+        }
+        #description,
+        #title {
+            color: white;
+            position: absolute;
+            top: 50px;
+            z-index: 1;
+        }
+        #description {
+            width: 60%;
+            top: 110px;
+        }
+        #separator2,
+        #separator1 {
+            position: absolute;
+            top: 150px;
+            width: 100%;
+        }
+        #separator2 {
+            top: 55px;
+        }
+
+        #holder {
+            animation: fade-in 0.5s ease-in-out;
+        }
+
+        @keyframes fade-in{
+            from {
+                transform: translateY(300%);
+            }
+            to {
+                transform: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="holder">
+        <h1 id="title">tozzletoz</h1>
+        <span id="description">Welcome to my GitHub page! You might check out some of my creations here.</span>
+        <hr id="separator1">
+        <hr id="separator2">
+        <button id="btn1">visit <br><i>Diamond Clicker</i></br></button></button>
+    </div>
+</body>
+</html>
+
+<script>
+    const btn1 = document.getElementById("btn1")
+    btn1.addEventListener("click", function(){
+        window.open("https://tozzletoz.github.io/diamondclicker/", "_blank")
+    })
+</script>
