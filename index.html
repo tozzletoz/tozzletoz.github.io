@@ -9,6 +9,11 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
+        ::selection{
+            color: rgb(0, 0, 0);
+            background: rgba(255, 255, 255, 0.541);
+        }
+
         body{
             background-color: #3A7CA5;
             height: 98vh;
@@ -39,6 +44,7 @@
             width: 180px;
             border-radius: 1px;
             transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
         }
         #btn1:hover {
             transform: scale(1.02);
@@ -71,10 +77,10 @@
 
         @keyframes fade-in{
             from {
-                transform: translateY(300%);
+                transform: translateY(180%) scale(0);
             }
             to {
-                transform: translateY(0%);
+                transform: translateY(0%) scale(1);
             }
         }
     </style>
